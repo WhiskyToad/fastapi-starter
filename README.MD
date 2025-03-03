@@ -1,8 +1,8 @@
-# GoalForge FastAPI App with PostgreSQL and Docker
+# Starter FastAPI App with PostgreSQL and Docker
 
 ## Introduction
 
-This is an API for the goalforge app.
+This is an API for starting out projects.
 
 ## Features
 
@@ -35,15 +35,15 @@ Copy the .env.example file in the root of the project and configure your environ
 
 We use poetry to manage this project, you will want to ensure you create virtual environments locally
 
-   ```bash
-   poetry config virtualenvs.in-project true
-   ```
+```bash
+poetry config virtualenvs.in-project true
+```
 
 And then run this command to install the dependancies and create a local .venv file
 
-   ```bash
-   poetry install
-   ```
+```bash
+poetry install
+```
 
 Make sure your ide is configured to use this .venv as your interpretor for python
 
@@ -79,17 +79,17 @@ poetry run alembic upgrade head
 
 Tests are all under the test folder and split into different folders within. It spins up a SQLite database for each test run and you can run the tests with the command
 
-   ```bash
-   poetry run pytest
-   ```
+```bash
+poetry run pytest
+```
 
 ## Types
 
 This project is managed by pyright, you should have the pylance extension installed from vscode and can run the checker with this command
 
-   ```bash
-   poetry run pyright
-   ```
+```bash
+poetry run pyright
+```
 
 ## Project Module Creator
 
@@ -105,18 +105,19 @@ This script creates a basic module structure with Model, Repository, Routes, Sch
 
 4. Run the script by executing the following command:
 
-    ```bash
-    python create_module.py
-    ```
+   ```bash
+   python create_module.py
+   ```
 
 5. Follow the prompts and enter the name of the module when prompted.
 
 6. After execution, a new folder with the module name will be created in the `app` directory. Inside this folder, you will find the following files:
-    - `ModuleNameModel.py`: Contains the data model definitions.
-    - `ModuleNameRepository.py`: Provides access to data storage and retrieval methods.
-    - `ModuleNameRoutes.py`: Defines the API routes and endpoint handlers.
-    - `ModuleNameSchema.py`: Contains Pydantic schema definitions for data validation.
-    - `ModuleNameService.py`: Implements the business logic and interacts with the repository.
+
+   - `ModuleNameModel.py`: Contains the data model definitions.
+   - `ModuleNameRepository.py`: Provides access to data storage and retrieval methods.
+   - `ModuleNameRoutes.py`: Defines the API routes and endpoint handlers.
+   - `ModuleNameSchema.py`: Contains Pydantic schema definitions for data validation.
+   - `ModuleNameService.py`: Implements the business logic and interacts with the repository.
 
 7. You can modify these files to suit your specific project requirements.
 
