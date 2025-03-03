@@ -1,0 +1,10 @@
+{
+    "reportGeneralTypeIssues": true,
+    "reportUndefinedVariable": true,
+    "reportMissingImports": true,
+    "useLibraryCodeForTypes": true,
+    "venvPath": ".venv",
+    "include": [
+        "./app/*"
+    ]
+}
