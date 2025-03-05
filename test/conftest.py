@@ -7,6 +7,7 @@ import pytest
 
 from app.shared.config.Database import get_db_connection
 from app.shared.models.BaseModel import EntityMeta
+from app.User.UserModel import UserModel
 
 SQLALCHEMY_DATABASE_URL = "sqlite://"
 
@@ -22,11 +23,13 @@ EntityMeta.metadata.create_all(bind=engine)
 
 
 def override_get_db():
+    db = None
     try:
         db = TestingSessionLocal()
         yield db
     finally:
-        db.close()
+        if db is not None:
+            db.close()
 
 
 app.dependency_overrides[get_db_connection] = override_get_db

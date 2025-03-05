@@ -2,7 +2,7 @@ from fastapi.testclient import TestClient
 import pytest
 from test.utils.cleanup import cleanup_users_db
 
-SIGNUP_URL = "/api/user/signup"
+SIGNUP_URL = "/api/user"
 TEST_USER_EMAIL = "test@test.com"
 
 
@@ -23,8 +23,8 @@ def test_signup_invalid_email(test_client: TestClient):
     assert response.json() == {
         "detail": [
             {
-                "message": "value is not a valid email address",
-                "code": "value_error.email",
+                "message": "value is not a valid email address: The email address is not valid. It must have exactly one @-sign.",
+                "code": "value_error",
             }
         ]
     }
@@ -38,7 +38,7 @@ def test_signup_missing_details(test_client: TestClient):
     assert response_missing_email.status_code == 422
     print(response_missing_email.json())
     assert response_missing_email.json() == {
-        "detail": [{"message": "field required", "code": "value_error.missing"}]
+        "detail": [{"message": "Field required", "code": "missing"}]
     }
 
     response_missing_password = test_client.post(
@@ -47,7 +47,7 @@ def test_signup_missing_details(test_client: TestClient):
     )
     assert response_missing_password.status_code == 422
     assert response_missing_password.json() == {
-        "detail": [{"message": "field required", "code": "value_error.missing"}]
+        "detail": [{"message": "Field required", "code": "missing"}]
     }
 
 

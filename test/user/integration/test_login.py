@@ -63,8 +63,8 @@ def test_missing_details(test_client: TestClient):
     assert response_missing_email.json() == {
         "detail": [
             {
-                "code": VALUE_ERROR_MISSING,
-                "message": "field required",
+                "code": "missing",
+                "message": "Field required",
             }
         ]
     }
@@ -76,8 +76,8 @@ def test_missing_details(test_client: TestClient):
     assert response_missing_password.json() == {
         "detail": [
             {
-                "code": VALUE_ERROR_MISSING,
-                "message": "field required",
+                "code": "missing",
+                "message": "Field required",
             }
         ]
     }

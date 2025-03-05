@@ -5,6 +5,7 @@ from fastapi.responses import JSONResponse
 from fastapi.exceptions import RequestValidationError
 
 from app.Example.ExampleRoutes import ExampleRouter
+from app.User.UserRoutes import UserRouter
 
 load_dotenv()
 
@@ -26,3 +27,4 @@ async def custom_exception_handler(request: Request, exc: RequestValidationError
 
 
 app.include_router(ExampleRouter)
+app.include_router(UserRouter)
