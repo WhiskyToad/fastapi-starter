@@ -1,6 +1,6 @@
 from fastapi import Depends, APIRouter
-from app.example.ExampleService import ExampleService
-from app.example.ExampleSchema import Example
+from app.Example.ExampleService import ExampleService
+from app.Example.ExampleSchema import Example
 
 ExampleRouter = APIRouter(prefix="/api/example", tags=["example"])
 

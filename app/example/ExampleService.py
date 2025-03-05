@@ -1,7 +1,7 @@
 from fastapi import Depends
-from app.example.ExampleRepository import ExampleRepository
-from app.example.ExampleModel import ExampleModel
-from app.example.ExampleSchema import Example
+from app.Example.ExampleRepository import ExampleRepository
+from app.Example.ExampleModel import ExampleModel
+from app.Example.ExampleSchema import Example
 from app.shared.errors.CustomError import CustomError
 
 

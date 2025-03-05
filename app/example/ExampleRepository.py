@@ -2,7 +2,7 @@ from typing import Optional
 from fastapi import Depends
 from sqlalchemy.orm import Session
 from app.shared.config.Database import get_db_connection
-from app.example.ExampleModel import ExampleModel
+from app.Example.ExampleModel import ExampleModel
 
 
 class ExampleRepository:

@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from fastapi.responses import JSONResponse
 from fastapi.exceptions import RequestValidationError
 
-from app.example.ExampleRoutes import ExampleRouter
+from app.Example.ExampleRoutes import ExampleRouter
 
 load_dotenv()
 
