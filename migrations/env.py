@@ -9,7 +9,8 @@ from sqlmodel import SQLModel
 from alembic import context
 
 from app.shared.models.BaseModel import EntityMeta
-from app.example.ExampleModel import *
+from app.Example.ExampleModel import *
+from app.User.UserModel import *
 from dotenv import load_dotenv
 import os
 

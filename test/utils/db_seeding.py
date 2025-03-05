@@ -1,6 +1,6 @@
-from app.jwt.JwtService import JwtService
-from app.shared.utils.security import SecurityUtils
-from app.user.UserModel import UserModel
+from app.Jwt.JwtService import JwtService
+from app.Auth.security import SecurityUtils
+from app.User.UserModel import UserModel
 from test.conftest import TestingSessionLocal
 
 

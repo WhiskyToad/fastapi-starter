@@ -1,6 +1,5 @@
 from datetime import timedelta, datetime
 from jose import jwt
-import os
 
 from app.shared.config.env_variables import ALGORITHM, SECRET_KEY
 

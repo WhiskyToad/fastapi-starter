@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Integer, String
 from app.shared.models.BaseModel import EntityMeta
 from sqlalchemy.orm import mapped_column
 
